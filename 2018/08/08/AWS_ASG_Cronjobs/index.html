@@ -7,17 +7,17 @@
   
   <title>Running cron jobs on AWS ASG instances | Elliots Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group? One solution on aws is to install the SSM">
+  <meta name="description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once per autoscale group? One solution on aws is to install the">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Running cron jobs on AWS ASG instances">
 <meta property="og:url" content="http://elliotkozil.com/2018/08/08/AWS_ASG_Cronjobs/index.html">
 <meta property="og:site_name" content="Elliots Blog">
-<meta property="og:description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group? One solution on aws is to install the SSM">
+<meta property="og:description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once per autoscale group? One solution on aws is to install the">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-09T05:57:41.635Z">
+<meta property="og:updated_time" content="2018-08-09T05:59:07.689Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Running cron jobs on AWS ASG instances">
-<meta name="twitter:description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group? One solution on aws is to install the SSM">
+<meta name="twitter:description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once per autoscale group? One solution on aws is to install the">
   
     <link rel="alternate" href="/atom.xml" title="Elliots Blog" type="application/atom+xml">
   
@@ -86,7 +86,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group?</p>
+        <p>When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once per autoscale group?</p>
 <p>One solution on aws is to install the SSM agent on all instances, implement the script in an SSM document, then use a lamdba function to invoke that script on a target instance.</p>
 <p>If you don’t already use these services, you can accomplish the same using just <code>cron</code>, <code>curl</code>, and the <code>aws</code> cli tools. We will write a script that invokes its arg on only one server in the asg.</p>
 <script src="https://gist.github.com/Elliot128/6fc5e2d38b62df5ac077e47e07ee5240.js"></script>
@@ -97,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://elliotkozil.com/2018/08/08/AWS_ASG_Cronjobs/" data-id="cjkm5jjja0000kivsmydx4xoi" class="article-share-link">Share</a>
+      <a data-url="http://elliotkozil.com/2018/08/08/AWS_ASG_Cronjobs/" data-id="cjkm5k6eb0000livs6g8tqor3" class="article-share-link">Share</a>
       
       
     </footer>
