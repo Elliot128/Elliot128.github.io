@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Elliots Blog">
 <meta property="og:description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group? One solution on aws is to install the SSM">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-09T05:40:16.408Z">
+<meta property="og:updated_time" content="2018-08-09T05:54:00.344Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Running cron jobs on AWS ASG instances">
 <meta name="twitter:description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group? One solution on aws is to install the SSM">
@@ -88,12 +88,16 @@
       
         <p>When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group?</p>
 <p>One solution on aws is to install the SSM agent on all instances, implement the script in an SSM document, then use a lamdba function to invoke that script on a target instance.</p>
-<p>If you don’t already use these services, we can accomplish the same using just <code>cron</code>, <code>curl</code>, and the <code>aws</code> cli tools.</p>
+<p>If you don’t already use these services, you can accomplish the same using just <code>cron</code>, <code>curl</code>, and the <code>aws</code> cli tools. We will write a script that accepts invokes its arg on only one server in the asg.</p>
 <script src="https://gist.github.com/Elliot128/6fc5e2d38b62df5ac077e47e07ee5240.js"></script>
+
+
+<p>We can then run the job as an arg to this script in crontab:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * * * * /once_per_asg.sh /job.sh</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://elliotkozil.com/2018/08/08/AWS_ASG_Cronjobs/" data-id="cjkm52fhc00008avsd7y1b1a0" class="article-share-link">Share</a>
+      <a data-url="http://elliotkozil.com/2018/08/08/AWS_ASG_Cronjobs/" data-id="cjkm5e5om0000hbvsvi6bc4u2" class="article-share-link">Share</a>
       
       
     </footer>
