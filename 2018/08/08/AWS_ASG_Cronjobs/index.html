@@ -5,19 +5,19 @@
   
 
   
-  <title>Test Post | Hexo</title>
+  <title>Running cron jobs on AWS ASG instances | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Testing 12// this is some javacsriptconst test = () =&amp;gt; console.log(&apos;test&apos;)">
+  <meta name="description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group? One solution on aws is to install the SSM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Test Post">
-<meta property="og:url" content="http://yoursite.com/2018/08/08/Test-Post/index.html">
+<meta property="og:title" content="Running cron jobs on AWS ASG instances">
+<meta property="og:url" content="http://yoursite.com/2018/08/08/AWS_ASG_Cronjobs/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Testing 12// this is some javacsriptconst test = () =&amp;gt; console.log(&apos;test&apos;)">
+<meta property="og:description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group? One solution on aws is to install the SSM">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-08T22:23:45.221Z">
+<meta property="og:updated_time" content="2018-08-09T05:40:16.408Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Test Post">
-<meta name="twitter:description" content="Testing 12// this is some javacsriptconst test = () =&amp;gt; console.log(&apos;test&apos;)">
+<meta name="twitter:title" content="Running cron jobs on AWS ASG instances">
+<meta name="twitter:description" content="When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group? One solution on aws is to install the SSM">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,9 +64,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Test-Post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-AWS_ASG_Cronjobs" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/08/08/Test-Post/" class="article-date">
+    <a href="/2018/08/08/AWS_ASG_Cronjobs/" class="article-date">
   <time datetime="2018-08-08T20:02:00.000Z" itemprop="datePublished">2018-08-08</time>
 </a>
     
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Test Post
+      Running cron jobs on AWS ASG instances
     </h1>
   
 
@@ -86,12 +86,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Testing</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// this is some javacsript</span></span><br><span class="line"><span class="keyword">const</span> test = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'test'</span>)</span><br></pre></td></tr></table></figure>
+        <p>When processes must be ran at a set interval on an machine, cron is popular tool for the job. But, what if the process must be ran only once autoscale group?</p>
+<p>One solution on aws is to install the SSM agent on all instances, implement the script in an SSM document, then use a lamdba function to invoke that script on a target instance.</p>
+<p>If you don’t already use these services, we can accomplish the same using just <code>cron</code>, <code>curl</code>, and the <code>aws</code> cli tools.</p>
+<script src="https://gist.github.com/Elliot128/6fc5e2d38b62df5ac077e47e07ee5240.js"></script>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/08/Test-Post/" data-id="cjklpad3n0000g5vslxwty3g5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/08/AWS_ASG_Cronjobs/" data-id="cjkm4vx8100003cvsadwzv793" class="article-share-link">Share</a>
       
       
     </footer>
@@ -130,7 +132,7 @@
       <ul>
         
           <li>
-            <a href="/2018/08/08/Test-Post/">Test Post</a>
+            <a href="/2018/08/08/AWS_ASG_Cronjobs/">Running cron jobs on AWS ASG instances</a>
           </li>
         
       </ul>
